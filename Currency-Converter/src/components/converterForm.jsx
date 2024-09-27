@@ -13,6 +13,10 @@ const ConverterForm = () => {
         setFromCurrency(toCurrency);
         setToCurrency(fromCurrency);
     }
+      // Toggle dark mode
+    const toggleDarkMode = () => {
+        document.documentElement.classList.toggle('dark');
+      }
 
     // Function to fetch the exchange rate and update the result
     const getExchangeRate = async () => {
@@ -47,7 +51,11 @@ const ConverterForm = () => {
     useEffect(() => getExchangeRate, []);
 
     return (
-        <form className="converter-form" onSubmit={handleFormSubmit}>
+        <div className="bg-white dark:bg-gray-800 text-black dark:text-white">
+            <button onClick={toggleDarkMode} className="ml-auto float-right">
+                 Dark Mode
+            </button>
+            <form className="converter-form" onSubmit={handleFormSubmit}>
             <div className="form-group">
                 <label className="form-label">Enter Amount</label>
                 <input
@@ -90,6 +98,8 @@ const ConverterForm = () => {
                 {isLoading ? "Getting exchange rate..." : result}
             </p>
         </form>
+        </div>
+        
     )
 }
 
