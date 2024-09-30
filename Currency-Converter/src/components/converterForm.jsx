@@ -13,10 +13,10 @@ const ConverterForm = () => {
         setFromCurrency(toCurrency);
         setToCurrency(fromCurrency);
     }
-    //   // Toggle dark mode
-    // const toggleDarkMode = () => {
-    //     document.documentElement.classList.toggle('dark');
-    //   }
+      // Toggle dark mode
+    const toggleDarkMode = () => {
+        document.documentElement.classList.toggle('dark');
+      }
 
     // Function to fetch the exchange rate and update the result
     const getExchangeRate = async () => {
