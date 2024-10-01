@@ -160,6 +160,36 @@ body {
   background: rgba(255, 255, 255, 0.15);
 }
 
+.page-container {
+  transition: background-color 0.3s ease;
+}
+
+.light-mode {
+  background-color: #030728;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #030728;
+}
+
+
 @media (max-width: 640px) {
   body {
     padding: 0 10px;
