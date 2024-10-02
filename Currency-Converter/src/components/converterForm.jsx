@@ -52,11 +52,17 @@ const ConverterForm = () => {
   // Fetch exchange rate on initial render
   useEffect(() => {
     getExchangeRate();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, []);
 
   return (
-    <div className={`body ${darkMode ? "dark-mode" : "light-mode"}`}>
+    <div className={`currency-converter ${darkMode ? "dark-mode" : "light-mode"}`}>
+        <h2 
+        className={`converter-title `}>
+          Currency Converter
+        </h2>
+
+<div className={`page-container`}>
       <button onClick={toggleDarkMode} className="dark-mode-toggle">
         {darkMode ? "Light Mode" : "Dark Mode"}
       </button>
@@ -117,6 +123,9 @@ const ConverterForm = () => {
         </p>
       </form>
     </div>
+</div>
+
+   
   );
 };
 
